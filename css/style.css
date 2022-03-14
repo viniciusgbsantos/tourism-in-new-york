@@ -1,0 +1,260 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,300&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: poppins, 'arial', sans-serif;
+    background-color: #171616;
+    color: #e1e1e1;
+}
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: #e1e1e1;
+}
+.header-top{
+    width: 100%;
+    height: 80px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    padding: 0 20px;
+    box-sizing: border-box;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+.containerText{
+    min-block-size: 20%;
+    min-inline-size: 20%;
+    margin: 20px 0;
+    box-sizing: border-box;
+    display: grid;
+    place-content: center;
+    font-family: poppins, sans-serif;
+}
+.textEfect::before{
+    transform: scaleX(0);
+    transform-origin: bottom right;
+}
+.textEfect:hover::before{
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+.textEfect::before{
+    content: " ";
+    display: block;
+    position: absolute;
+    top: 0; right: 0; bottom: 0; left: 0;
+    inset: 0 0 0 0;
+    background: #ad106a;
+    border-radius: 4px;
+    z-index: -1;
+    transition: transform .3s ease;
+}
+.textEfect{
+    position: relative;
+    font-size: 5vmin;
+    padding: 4px;
+    cursor: pointer;
+    color:#fff;
+    font-weight: 700;
+}
+.header-nav ul{
+    display: flex;
+}
+.header-nav li{
+    margin: 0 10px;
+}
+.header-nav a{
+    font-weight: 700;
+    font-size: 18px;
+    transition: .5s;
+}
+.header-nav a:hover{
+    color: #c02980;
+}
+.scroll-active{
+    background-color: rgba(192, 75, 128, 0.534);
+}
+.start{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,0)), url(../img/clube-da-luta-background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+.start-title{
+    margin-bottom: 6px;
+    font-size: 7vmin;
+    text-transform: uppercase;
+}
+.start-text{
+    margin-bottom: 40px;
+    font-size: 4vmin;
+}
+.start-link{
+    border: 1px solid #c02980;
+    background-color: #c02980;
+    padding: 12px 30px;
+    border-radius: 70px;
+    font-size:3vmin;
+    transition: .5s;
+    font-weight:700;
+    text-transform: uppercase;
+}
+.start-link:hover{
+    background-color: transparent;
+    box-shadow: 0 0 1em #ccc;
+    transform: scale(1.06);
+}
+.sinopse{
+    width: 80%;
+    margin: 40px auto;
+}
+.sinopse h3{
+    color: #c02980;
+    font-size: 5vmin;
+    margin-bottom: 20px;
+}
+.sinopse p{
+    font-size: 3vmin;
+}
+.blockOne{
+    width: 80%;
+    display: flex;
+    align-items: center;
+    margin: 20px auto;
+}
+.blockOne img{
+    width: 50%;
+    border-radius: 10px;
+    margin: auto 20px;
+}
+.info-card{
+    margin-left: 20px;
+}
+.title{
+    color: #c02980;
+    font-size: 5vmin;
+    margin-bottom: 20px;
+}
+.text{
+    font-size: 2.5vmin;
+}
+.blockTwo{
+    width: 80%;
+    display: flex;
+    align-items: center;
+    margin: 50px auto;
+}
+.blockTwo img{
+    width: 50%;
+    border-radius: 10px;
+    margin: auto 20px;
+}
+.blockTwo img:hover, .blockOne img:hover{
+    opacity: 0.8;
+}
+.spacingImg{
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 300px;
+    margin: 50px auto;
+    -webkit-touch-callout: none; 
+    -webkit-user-select:   none; 
+     -khtml-user-select:   none; 
+       -moz-user-select:   none; 
+        -ms-user-select:   none; 
+            user-select:   none;
+}
+.imgOne{
+    background-image: url('../img/fight-club.png');
+}
+.imgTwo{
+    background-image: url('../img/clube-da-luta-4.jpg');
+}
+.imgThree{
+    background-image: url('../img/clube-da-luta-2.jpg');
+}
+#contato{
+    display: flex;
+    flex-direction: row;
+    background-color: transparent;
+    width: 100%;
+    height: 100px;
+    padding: 0 30px;
+    background-color:rgba(0,0,0,.5);
+}
+.email{
+    width: 50%;
+    color: #fff;
+    font-size: 3vmin;
+    font-weight: 400;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    text-transform: uppercase;
+}
+.icones{
+    width: 40%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    font-size: 4.5vmin;
+    margin: auto 10px;
+}
+#icons{
+    color: #e1e1e1;
+    transition: .5s ease;
+}
+#icons:hover{
+    color: #ad106a;
+    transform: scale(1.17);
+}
+@media screen  and (max-width: 1100px) {
+    .blockOne{
+        flex-direction: column;
+    }
+    .blockOne img, .blockTwo img{
+        width: 80%;
+        margin-bottom: 30px;
+    }
+    .blockTwo{
+        flex-direction:column-reverse;
+    }
+    .email{
+        width:60%;
+    }
+}
+@media screen  and (max-width: 600px) {
+    .start{
+        background-image: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,0)), url(../img/clube-da-luta.jpg);
+        background-size: cover;
+    }
+    .spacingImg{
+        display: none;
+    }
+    .blockOne img, .blockTwo img{
+        width: 100%;
+        margin-bottom: 30px;
+    }
+}
+@media screen  and (max-width: 500px) {
+    .header-top{
+        flex-direction:column;
+    }   
+}
